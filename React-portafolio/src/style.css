@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif; /* Modern sans-serif font */
+  margin: 0;
+  padding: 0;
+  background-color: #111; /* Dark background */
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo/title and nav */
+  align-items: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Ensure header takes up full width */
+  max-width: 960px; /* (Optional) Limit max-width on larger screens */
+  margin: 0 auto; /* Center the header horizontally */ 
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+header nav {
+  display: flex; /* Makes the nav a flex container for its children */
+}
+
+/* General Styles */
+/* ... your existing styles ... */
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+}
+
+header nav ul li {
+  margin-right: 15px; /* Add margin to the right of each list item */
+}
+
+header nav ul li:last-child { /* Remove margin from the last item to prevent extra space at the end */
+  margin-right: 0;
+}
+
+
+main {
+  padding: 3rem; /* Increased padding for more breathing room */
+}
+
+section {
+  background-color: #222; /* Slightly lighter section background */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #ff5722; /* Accent color for headings */
+  margin-bottom: 1.5rem;
+}
+
+input,
+textarea {
+  background-color: #333; /* Darker input background */
+  color: #eee;
+  border: 1px solid #555;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ff5722; /* Accent color on focus */
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #ff5722; /* Accent color for button */
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e64a19; /* Slightly darker accent on hover */
+}
+
+
+/* Specific Styles */
+
+.projects {
+  display: grid; /* Use grid for better layout control */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 2rem;
+}
+
+.project img {
+  max-width: 100%;
+  height: 200px; /* Consistent height for project images */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+a {
+  color: inherit;        /* Inherit color from parent element (body in this case) */
+  text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover (optional) */
+}
+
+a:focus, a:active { /* Remove the outline that appears when a link is focused or active */
+  outline: none;
+}
+
+
+/* Add more styles for other components/elements as needed */
