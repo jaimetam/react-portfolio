@@ -1,26 +1,26 @@
-/* General Styles */
+/* Professional General Styles */
 body {
-  font-family: "Poppins", sans-serif; /* Modern sans-serif font */
+  font-family: "Inter", sans-serif; /* Clean, modern font */
   margin: 0;
   padding: 0;
-  background-color: #111; /* Dark background */
-  color: #eee;
+  background-color: #222; /* Dark, but not harsh */
+  color: #eee; /* Light text for contrast */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
 }
 
+/* Sophisticated Header */
 header {
   display: flex;
-  justify-content: space-between; /* Distribute space between logo/title and nav */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #1a1a1a;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 100%; /* Ensure header takes up full width */
-  max-width: 960px; /* (Optional) Limit max-width on larger screens */
-  margin: 0 auto; /* Center the header horizontally */ 
+  background-color: #333; /* Slightly lighter background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 header h1 {
@@ -29,49 +29,62 @@ header h1 {
   margin: 0;
 }
 
-header nav {
-  display: flex; /* Makes the nav a flex container for its children */
+/* Elegant Navigation */
+nav {
+  display: flex;
 }
 
-/* General Styles */
-/* ... your existing styles ... */
-
-header nav ul {
+nav ul {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 15px;
+  gap: 20px;
 }
 
-header nav ul li {
-  margin-right: 15px; /* Add margin to the right of each list item */
+nav a {
+  color: #eee; /* Inherit from body */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
 }
 
-header nav ul li:last-child { /* Remove margin from the last item to prevent extra space at the end */
-  margin-right: 0;
+nav a:hover {
+  color: #007bff; /* Blue hover for contrast */
 }
 
-
+/* Clean Main Content */
 main {
-  padding: 3rem; /* Increased padding for more breathing room */
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
 }
+
+.about-me {
+  text-align: center;  /* Center the text horizontally */
+}
+
+.about-me a { /* Target links within the About Me section */
+  padding: 0.5rem 1rem;  /* Add padding around the link text */
+}
+
 
 section {
-  background-color: #222; /* Slightly lighter section background */
+  background-color: #333; /* Consistent with header */
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded for softer feel */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 section h2 {
-  color: #ff5722; /* Accent color for headings */
+  color: #007bff; /* Blue accent */
   margin-bottom: 1.5rem;
 }
 
+/* Refined Form Elements */
 input,
 textarea {
-  background-color: #333; /* Darker input background */
+  background-color: #444;
   color: #eee;
   border: 1px solid #555;
   transition: border-color 0.3s ease;
@@ -79,47 +92,169 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #ff5722; /* Accent color on focus */
+  border-color: #007bff; /* Blue on focus */
   outline: none;
 }
 
 button[type="submit"] {
-  background-color: #ff5722; /* Accent color for button */
+  background-color: #007bff; 
   color: #fff;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #e64a19; /* Slightly darker accent on hover */
+  background-color: #0056b3;
 }
 
-
-/* Specific Styles */
-
+/* Stylish Projects Grid */
 .projects {
-  display: grid; /* Use grid for better layout control */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+}
+
+.about-me-img {
+  max-width: 100%; /* Allow image to scale responsively */
+  height: auto;     /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto;  /* Center the image horizontally */
 }
 
 .project img {
   max-width: 100%;
-  height: 200px; /* Consistent height for project images */
-  object-fit: cover; /* Maintain aspect ratio and cover container */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* Subtle Links */
 a {
-  color: inherit;        /* Inherit color from parent element (body in this case) */
-  text-decoration: none; /* Remove default underline */
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  text-decoration: underline; /* Add underline on hover (optional) */
+  color: #007bff;
+  text-decoration: underline;
 }
 
-a:focus, a:active { /* Remove the outline that appears when a link is focused or active */
+a:focus, a:active {
   outline: none;
 }
+footer { 
+  text-align: center; /* Center text content */
+}
 
+/* White Footer Links with Padding */
+footer a {
+  color: #fff; /* White text */
+  text-decoration: underline dotted #f00; /* Red dotted underline */
+  padding: 0 10px;  /* Add padding around each link */
+}
 
-/* Add more styles for other components/elements as needed */
+footer a:hover {
+  color: #ff69b4; /* Hot pink on hover */
+  text-decoration: underline double #ff69b4; /* Double hot pink underline */
+}
+
+ h2 {
+  margin-bottom: 1.5rem; /* Dotted red underline */
+  text-align: center; /* Center the h2 text */
+}
+
+input, textarea {
+  background-color: #222; /* Darker gray background */
+  color: #eee;
+  border: 1px solid #555;
+  padding: 0.8rem;  /* Increased padding */
+  border-radius: 4px; /* Subtle rounded corners */
+  margin-bottom: 1rem; /* Space between fields */
+  width: 100%;       /* Make inputs take full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+input[type="submit"] {  /* Style submit button separately */
+  background-color: #007bff;  /* Blue button */
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: rgb(0, 17, 255); /* Green outline on focus */
+  box-shadow: 0 0 5px rgba(17, 0, 255, 0.808); /* Subtle glow */
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem; /* Maintains spacing between projects */
+}
+
+.project { /* Style individual project containers */
+  background-color: #333; /* Subtle background */
+  padding: 3rem;
+  border-radius: 8px; /* Softer corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text within each project */
+}
+
+.project img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem; /* Space between image and title */
+}
+
+.project a { /* Style links within each project */
+  display: inline-block; /* Makes links behave like block elements for styling */
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  padding: 1rem 0.5rem;
+  border-radius: 9px;
+  text-decoration: none;
+  margin-bottom: 0.5rem; /* Add space between links */
+  transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Clean and Organized Resume Section */
+#resume { /* Target the resume section */
+  padding: 2rem; /* Add some padding around the section */
+  line-height: 1.6; /* Improve readability */
+  font-weight: 400;
+}
+
+#resume h3 {
+  color: #007bff; /* Blue heading for sections */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#resume ul { /* Style lists in the resume */
+  list-style: none;
+  padding-left: 0; /* Remove default list padding */
+}
+
+#resume li {
+  margin-bottom: 0.8rem; /* Space between list items */
+}
+
+#resume strong { /* Style job titles or dates */
+  font-weight: bold;
+}

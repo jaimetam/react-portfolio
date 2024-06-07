@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './style.css';  // Import the global stylesheet
+import './index.css';  // Import the global stylesheet
 import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom';
 

@@ -7,7 +7,7 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
-import './App.css'; // Import your global styles if you have any
+import './index.css'; // Import your global styles if you have any
 
 function App() {
   return (
